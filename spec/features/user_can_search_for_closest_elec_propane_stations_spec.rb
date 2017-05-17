@@ -4,10 +4,10 @@ describe "when a user visits the home page" do
   it "can enter a zipcode to search for closest stations" do
 
     visit root_path
-    fill_in "location", with: 80203
+    fill_in "location", with: "80203"
     click_on "Locate"
 
-    expect(path).to be(search_path)
+    expect(current_path).to eq(search_path)
     expect(page).to have_content("City of Denver - Cultural Center Complex Garage")
     expect(page).to have_content("65 W 12th Ave")
     expect(page).to have_content("Garage business hours; pay lot")

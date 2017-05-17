@@ -1,10 +1,1 @@
-<% form_for :search do |f| %>
-<%= f.label :location %>
-<%= f.text_area :location %>
-<%= f.hidden_field :radius, value: "6" %>
-<%= f.hidden_field :fuel_type, value: "ELEC,LPG" %>
-<%= f.hidden_field :limit, value: "10" %>
-byebug
-<%= f.hidden_field :api_key, value: ENV["api_key"] %>
-<%= f.submit, "Locate" %>
-<% end %>
+

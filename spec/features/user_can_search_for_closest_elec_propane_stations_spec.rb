@@ -4,7 +4,7 @@ describe "when a user visits the home page" do
   it "can enter a zipcode to search for closest stations" do
 
     visit root_path
-    fill_in "Location", with: "80203"
+    fill_in "location", with: 80203
     click_on "Locate"
 
     expect(path).to be(search_path)
